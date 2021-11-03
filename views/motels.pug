@@ -5,4 +5,9 @@ block content
   div(class="container-fluid mt-3")
   div(class="row")
     each motel,index in motels
-        div(class="col-sm-4")  #{motel.motelRatings} -  #{motel.motelCost} - #{motel.motelFacility} 
+        div(class="col-sm-4"  onclick=`buy(${index})`)  #{motel.motelRatings} -  #{motel.motelCost} - #{motel.motelFacility} 
+    script.
+      function buy(itemNo)
+      {
+        alert(`You purchased Item ${itemNo+1}`)
+      } 
